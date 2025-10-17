@@ -19,62 +19,41 @@ runs:
     - name: Backup Original Project Dependencies
       shell: bash
       run: |
-        # Backup existing package.json and bun.lockb if they exist
+        # Backup existing package.json and bun.lock if they exist
         if [ -f package.json ]; then
           cp package.json package.json.original-backup
         fi
-        if [ -f bun.lockb ]; then
-          cp bun.lockb bun.lockb.original-backup
+        if [ -f bun.lock ]; then
+          cp bun.lock bun.lock.original-backup
         fi
 
-    - name: Setup Bun
-      uses: oven-sh/setup-bun@v2
-      with:
-        bun-version: latest
-
-    - name: Install specific dependencies
+    - name: Create Minimal Dependencies Package
       shell: bash
       run: |
+        # Create a minimal package.json with only required dependencies
         echo '{
           "dependencies": {
-            "@actions/core": "^1.10.0",
-            "@actions/github": "^5.1.1",
+            "@actions/core": "^1.11.1",
             "@actions/exec": "^1.1.1",
+            "@actions/github": "^6.0.1",
             "js-yaml": "^4.1.0"
           }
         }' > package.json
-        bun i
 
-    - name: Restore Original Project Dependencies
-      shell: bash
-      run: |
-        # Restore original package.json if backup exists
-        if [ -f package.json.original-backup ]; then
-          mv package.json.original-backup package.json
-        else
-          # If no original exists, remove action's package.json
-          rm package.json
-        fi
-
-        # Restore original bun.lockb if backup exists
-        if [ -f bun.lockb.original-backup ]; then
-          mv bun.lockb.original-backup bun.lockb
-        else
-          # If no original exists, remove action's bun.lockb
-          rm -f bun.lockb
-        fi
+    - name: Setup Bun and install dependencies
+      uses: iamvikshan/.github/.github/actions/setup-bun@main
 
     - name: Run link updater
       shell: bash
       env:
         INPUT_GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
         INPUT_CONFIG_PATH: ${{ inputs.CONFIG_PATH }}
-      run: bun run ${{ github.action_path }}/dist/index.js
+      run: bun run ${{ github.action_path }}/src/index.ts
 
     - name: Post-Job Cleanup
       if: always()
       shell: bash
-      run: bun ${{ github.action_path }}/scripts/postjob.js
+      run: bun ${{ github.action_path }}/scripts/postjob.ts
 
 branding:
   icon: "link"

@@ -1,6 +1,6 @@
-// utils.js
-require('dotenv').config()
-const axios = require('axios')
+import 'dotenv/config'
+import axios from 'axios'
+
 // const { exec } = require('child_process')
 // const util = require('util')
 
@@ -8,7 +8,7 @@ if (!process.env.GH_TOKEN) {
   throw new Error('GH_TOKEN environment variable is required but not found')
 }
 
-const githubApi = axios.create({
+export const githubApi = axios.create({
   baseURL: 'https://api.github.com',
   headers: {
     Authorization: `token ${process.env.GH_TOKEN}`,
@@ -49,4 +49,4 @@ const githubApi = axios.create({
   // return false
 // } */
 
-module.exports = { githubApi /* unpublishNpmVersion */ }
+// export { unpublishNpmVersion }

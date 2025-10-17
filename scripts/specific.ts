@@ -1,13 +1,11 @@
-// cleanup-specific.js
-const { githubApi /* unpublishNpmVersion */ } = require('./utils')
-const readline = require('readline')
+import { githubApi } from './utils.ts'
+import * as readline from 'readline'
 
 const owner = 'iamvikshan'
 const repo = 'link-updater'
 const tag = 'v1.1.4'
-const npmVersion = tag.replace('v', '')
 
-async function confirm(message) {
+async function confirm(message: string): Promise<boolean> {
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -27,7 +25,9 @@ async function deleteSpecific() {
     const { data: releases } = await githubApi.get(
       `/repos/${owner}/${repo}/releases`
     )
-    const release = releases.find(r => r.tag_name === tag)
+    const release = releases.find(
+      (r: { tag_name: string; id: number }) => r.tag_name === tag
+    )
 
     if (release) {
       const confirmed = await confirm(`Delete GitHub release ${tag}?`)
@@ -36,17 +36,23 @@ async function deleteSpecific() {
           await githubApi.delete(
             `/repos/${owner}/${repo}/releases/${release.id}`
           )
-          console.log(`[GitHub] Deleted release: ${tag}`)
+          console.log(`✅ [GitHub] Deleted release: ${tag}`)
         } catch (error) {
-          if (error.response?.status === 404) {
-            console.log(`[GitHub] Release ${tag} already deleted`)
+          const err = error as {
+            response?: { status: number }
+            message: string
+          }
+          if (err.response?.status === 404) {
+            console.log(`ℹ️ [GitHub] Release ${tag} already deleted`)
           } else {
-            console.error(`[GitHub] Failed to delete release: ${error.message}`)
+            console.error(
+              `❌ [GitHub] Failed to delete release: ${err.message}`
+            )
           }
         }
       }
     } else {
-      console.log(`[GitHub] Release ${tag} not found`)
+      console.log(`ℹ️ [GitHub] Release ${tag} not found`)
     }
 
     // GitHub Tag Check & Delete
@@ -54,12 +60,13 @@ async function deleteSpecific() {
     if (tagConfirmed) {
       try {
         await githubApi.delete(`/repos/${owner}/${repo}/git/refs/tags/${tag}`)
-        console.log(`[GitHub] Deleted tag: ${tag}`)
+        console.log(`✅ [GitHub] Deleted tag: ${tag}`)
       } catch (error) {
-        if (error.response?.status === 422 || error.response?.status === 404) {
-          console.log(`[GitHub] Tag ${tag} already deleted or doesn't exist`)
+        const err = error as { response?: { status: number }; message: string }
+        if (err.response?.status === 422 || err.response?.status === 404) {
+          console.log(`ℹ️ [GitHub] Tag ${tag} already deleted or doesn't exist`)
         } else {
-          console.error(`[GitHub] Failed to delete tag: ${error.message}`)
+          console.error(`❌ [GitHub] Failed to delete tag: ${err.message}`)
         }
       }
     }
@@ -81,7 +88,10 @@ async function deleteSpecific() {
     }
     */
   } catch (error) {
-    console.error('[Error] Failed to fetch repository data:', error.message)
+    console.error(
+      '❌ [Error] Failed to fetch repository data:',
+      error instanceof Error ? error.message : String(error)
+    )
   }
 }
 

@@ -1,11 +1,10 @@
-// cleanup-all.js
-const { githubApi /* unpublishNpmVersion */ } = require('./utils')
-const readline = require('readline')
+import { githubApi } from './utils.ts'
+import * as readline from 'readline'
 
 const owner = 'iamvikshan'
 const repo = 'link-updater'
 
-async function confirm() {
+async function confirm(): Promise<boolean> {
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -26,11 +25,11 @@ async function deleteAll() {
   try {
     const confirmed = await confirm()
     if (!confirmed) {
-      console.log('Operation cancelled')
+      console.log('❌ Operation cancelled')
       return
     }
 
-    console.log('Starting complete cleanup...')
+    console.log('🗑️ Starting complete cleanup...')
 
     // First delete releases
     const { data: releases } = await githubApi.get(
@@ -38,7 +37,7 @@ async function deleteAll() {
     )
     for (const release of releases) {
       await githubApi.delete(`/repos/${owner}/${repo}/releases/${release.id}`)
-      console.log(`Deleted release: ${release.tag_name}`)
+      console.log(`✅ Deleted release: ${release.tag_name}`)
 
       // Note: Unpublishing npm versions can have significant consequences.
       // Please read the npm documentation on unpublishing before uncommenting the code below.
@@ -55,12 +54,15 @@ async function deleteAll() {
       await githubApi.delete(
         `/repos/${owner}/${repo}/git/refs/tags/${tag.name}`
       )
-      console.log(`Deleted tag: ${tag.name}`)
+      console.log(`✅ Deleted tag: ${tag.name}`)
     }
 
-    console.log('Cleanup completed!')
+    console.log('✅ Cleanup completed!')
   } catch (error) {
-    console.error('Error:', error.message)
+    console.error(
+      '❌ Error:',
+      error instanceof Error ? error.message : String(error)
+    )
   }
 }
 
