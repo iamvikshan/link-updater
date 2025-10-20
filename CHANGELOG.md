@@ -2,16 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-
 # [v1.2.1](https://github.com/iamvikshan/link-updater/compare/v1.2.0...v1.2.1) (2025-10-20)
-
-
 
 ## [1.2.1](https://github.com/iamvikshan/link-updater/compare/v1.2.0...v1.2.1) (2025-10-20)
 
 ### Bug Fixes
 
-* update dependencies and modify changelog formatting ([d665444](https://github.com/iamvikshan/link-updater/commit/d66544433cfaeb8c67fe0460af9965c2d972a3b2))
+- update dependencies and modify changelog formatting
+  ([d665444](https://github.com/iamvikshan/link-updater/commit/d66544433cfaeb8c67fe0460af9965c2d972a3b2))
 
 # [v1.2.0](https://github.com/iamvikshan/link-updater/compare/v1.1.11...v1.2.0) (2025-10-17)
 
