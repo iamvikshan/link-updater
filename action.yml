@@ -31,15 +31,13 @@ runs:
       shell: bash
       run: |
         # Create a minimal package.json with only required dependencies
-        cat > package.json << 'EOF'
-        {
+        echo '{
           "dependencies": {
                     "@actions/core": "^1.11.1",
                     "@actions/exec": "^1.1.1",
                     "@actions/github": "^6.0.1",
                     "js-yaml": "^4.1.0"
-          }
-        EOF
+          }' > package.json
 
     - name: Setup Bun and install dependencies
       uses: iamvikshan/.github/.github/actions/setup-bun@main
