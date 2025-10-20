@@ -192,4 +192,4 @@ This action was inspired by the need to maintain consistent documentation and li
 repositories. You can say i am lazy but after forking repositories, i have to update the links in
 the README.md file and i thought why not automate this process. So here it is.
 
-![Alt](https://repobeats.axiom.co/api/embed/6e20f9307c6fd3e13ca8be9c5832c432d0fe121b.svg 'Repobeats analytics image')
+![Alt](https://repobeats.axiom.co/api/embed/d47b94f3f18ca701da81bb653928362abc705faf.svg 'Repobeats analytics image')

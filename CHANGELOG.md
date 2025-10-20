@@ -2,17 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
-
 # [v1.2.0](https://github.com/iamvikshan/link-updater/compare/v1.1.11...v1.2.0) (2025-10-17)
-
-
 
 ## [1.2.0](https://github.com/iamvikshan/link-updater/compare/v1.1.11...v1.2.0) (2025-10-17)
 
 ### Features
 
-* correct formatting in package.json creation and remove unused npm publish configuration ([b4dfc65](https://github.com/iamvikshan/link-updater/commit/b4dfc65680cfb6b79b6a8571ac336dd42297560d))
-* implement cleanup and specific deletion scripts in TypeScript ([8891931](https://github.com/iamvikshan/link-updater/commit/889193105411c0ef618aa321a2723141a90a4418))
+- correct formatting in package.json creation and remove unused npm publish configuration
+  ([b4dfc65](https://github.com/iamvikshan/link-updater/commit/b4dfc65680cfb6b79b6a8571ac336dd42297560d))
+- implement cleanup and specific deletion scripts in TypeScript
+  ([8891931](https://github.com/iamvikshan/link-updater/commit/889193105411c0ef618aa321a2723141a90a4418))
 
 # [v1.1.11](https://github.com/iamvikshan/link-updater/compare/v1.1.10...v1.1.11) (2024-12-10)
 
