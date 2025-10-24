@@ -2,6 +2,7 @@
 
 [![Releases](https://github.com/iamvikshan/link-updater/actions/workflows/release.yml/badge.svg)](https://github.com/iamvikshan/link-updater/actions/workflows/release.yml)
 [![Cla](https://github.com/iamvikshan/link-updater/actions/workflows/cla.yml/badge.svg)](https://github.com/iamvikshan/link-updater/actions/workflows/cla.yml)
+[![wakatime](https://wakatime.com/badge/github/iamvikshan/link-updater.svg)](https://wakatime.com/badge/github/iamvikshan/link-updater)
 
 </div>
 
