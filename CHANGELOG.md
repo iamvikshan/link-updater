@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+
+# [v1.2.4](https://github.com/iamvikshan/link-updater/compare/v1.2.3...v1.2.4) (2026-01-21)
+
+
+
+## [1.2.4](https://github.com/iamvikshan/link-updater/compare/v1.2.3...v1.2.4) (2026-01-21)
+
+### Bug Fixes
+
+* **deps:** update dependency @actions/github to v7 ([#37](https://github.com/iamvikshan/link-updater/issues/37)) ([fc7462d](https://github.com/iamvikshan/link-updater/commit/fc7462ddc8d1de8dabe483c9bfc037048dcd9933))
+
 # [v1.2.3](https://github.com/iamvikshan/link-updater/compare/v1.2.2...v1.2.3) (2025-10-24)
 
 ## [1.2.3](https://github.com/iamvikshan/link-updater/compare/v1.2.2...v1.2.3) (2025-10-24)
