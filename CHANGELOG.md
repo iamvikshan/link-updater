@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 
 
+# [v1.2.5](https://github.com/iamvikshan/link-updater/compare/v1.2.4...v1.2.5) (2026-01-27)
+
+
+
+## [1.2.5](https://github.com/iamvikshan/link-updater/compare/v1.2.4...v1.2.5) (2026-01-27)
+
+### Bug Fixes
+
+* **deps:** update dependency @actions/github to v8 ([#41](https://github.com/iamvikshan/link-updater/issues/41)) ([a2ada18](https://github.com/iamvikshan/link-updater/commit/a2ada1832903a9431b183711991b582548fcf3e6))
+
 # [v1.2.4](https://github.com/iamvikshan/link-updater/compare/v1.2.3...v1.2.4) (2026-01-21)
 
 
