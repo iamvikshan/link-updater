@@ -1,5 +1,6 @@
 {
   "name": "links-updater",
+  "private": true,
   "description": "Automatically updates repository links/keywords and optionally creates PRs",
   "version": "1.2.5",
   "main": "src/index.ts",

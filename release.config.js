@@ -1,6 +1,12 @@
 export const branches = ['main']
 export const plugins = [
-  ['@semantic-release/npm', { npmPublish: false }],
+  [
+    '@semantic-release/npm',
+    {
+      npmPublish: false,
+      pkgRoot: '.'
+    }
+  ],
   [
     'semantic-release-gitmoji',
     {
