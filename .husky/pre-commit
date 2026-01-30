@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Skip in CI/CD environments (GitHub Actions, etc.)
+if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
+    exit 0
+fi
+
+# Only run in Codespaces
+if [ -z "$CODESPACES" ]; then
+    exit 0
+fi
+
+# Expected git config values
+EXPECTED_USER="iamvikshan"
+EXPECTED_EMAIL="103361575+iamvikshan@users.noreply.github.com"
+
+# Get current git config
+CURRENT_USER=$(git config --global user.name 2>/dev/null || echo "")
+CURRENT_EMAIL=$(git config --global user.email 2>/dev/null || echo "")
+
+# Check if config matches expected values
+if [ "$CURRENT_USER" = "$EXPECTED_USER" ] && [ "$CURRENT_EMAIL" = "$EXPECTED_EMAIL" ]; then
+    echo "✅ Git config already set correctly for $EXPECTED_USER"
+    exit 0
+fi
+
+# Config doesn't match, run the setup script
+echo "⚠️  Git config mismatch detected!"
+echo "   Current: $CURRENT_USER <$CURRENT_EMAIL>"
+echo "   Expected: $EXPECTED_USER <$EXPECTED_EMAIL>"
+echo ""
+echo "🔧 Running iamvikshan.sh to fix git config..."
+
+SCRIPT_PATH="$(git rev-parse --show-toplevel)/scripts/iamvikshan.sh"
+
+if [ ! -f "$SCRIPT_PATH" ]; then
+    echo "❌ Error: Could not find iamvikshan.sh at $SCRIPT_PATH"
+    exit 1
+fi
+
+if ! bash "$SCRIPT_PATH"; then
+    echo "❌ Error: iamvikshan.sh failed to execute successfully"
+    exit 1
+fi
+
+echo "✅ Git config updated successfully!"

@@ -11,13 +11,26 @@
         "eamodio.gitlens",
         "oven.bun-vscode",
         "christian-kohler.npm-intellisense",
-        "astro-build.astro-vscode"
+        "WakaTime.vscode-wakatime",
+        "coderabbit.coderabbit-vscode",
+        "DeepScan.vscode-deepscan",
+        "usernamehw.errorlens"
       ]
     }
   },
 
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bun install",
+  "postCreateCommand": "chmod +x scripts/iamvikshan.sh && bun install",
 
   // Set `remoteUser` to `root` to connect as root.
   "remoteUser": "root"
