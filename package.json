@@ -2,7 +2,7 @@
   "name": "links-updater",
   "private": true,
   "description": "Automatically updates repository links/keywords and optionally creates PRs",
-  "version": "1.2.5",
+  "version": "1.2.7",
   "main": "src/index.ts",
   "scripts": {
     "lint": "eslint src/**/*.ts",
