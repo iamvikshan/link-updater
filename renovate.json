@@ -1,11 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    "schedule:daily"
-  ],
+  "extends": ["config:recommended", ":dependencyDashboard", ":semanticCommits", "schedule:daily"],
   "reviewers": ["iamvikshan"],
   "assignees": ["iamvikshan"],
   "labels": ["dependencies"],
@@ -18,9 +13,7 @@
       "customType": "regex",
       "description": "Update GitHub Actions in markdown files",
       "managerFilePatterns": ["/\\.md$/"],
-      "matchStrings": [
-        "uses:\\s*(?<depName>[\\w.-]+/[\\w.-]+)@v?(?<currentValue>[\\w.+-]+)"
-      ],
+      "matchStrings": ["uses:\\s*(?<depName>[\\w.-]+/[\\w.-]+)@v?(?<currentValue>[\\w.+-]+)"],
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver",
       "extractVersionTemplate": "^v?(?<version>[\\w.+-]+)$"
@@ -70,12 +63,7 @@
       "description": "ESLint packages",
       "groupName": "eslint",
       "labels": ["dependencies", "npm", "linting"],
-      "matchPackageNames": [
-        "/^eslint/",
-        "/^@eslint//",
-        "/^@typescript-eslint//",
-        "/^typescript-eslint/"
-      ]
+      "matchPackageNames": ["/^eslint/", "/^@eslint//", "/^@typescript-eslint//", "/^typescript-eslint/"]
     },
     {
       "description": "Prettier and formatting",
