@@ -2,16 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-
 # [v1.2.7](https://github.com/iamvikshan/link-updater/compare/v1.2.6...v1.2.7) (2026-01-30)
-
-
 
 ## [1.2.7](https://github.com/iamvikshan/link-updater/compare/v1.2.6...v1.2.7) (2026-01-30)
 
 ### Bug Fixes
 
-* use CommonJS config and remove npm plugin to match advanced-git-sync ([1fcf690](https://github.com/iamvikshan/link-updater/commit/1fcf690b171b225667e9237838f04cafd839d392))
+- use CommonJS config and remove npm plugin to match advanced-git-sync
+  ([1fcf690](https://github.com/iamvikshan/link-updater/commit/1fcf690b171b225667e9237838f04cafd839d392))
 
 # [v1.2.5](https://github.com/iamvikshan/link-updater/compare/v1.2.4...v1.2.5) (2026-01-27)
 
