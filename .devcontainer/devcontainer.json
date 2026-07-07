@@ -5,16 +5,14 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
         "GitHub.copilot",
-        "esbenp.prettier-vscode",
         "eamodio.gitlens",
         "oven.bun-vscode",
         "christian-kohler.npm-intellisense",
         "WakaTime.vscode-wakatime",
         "coderabbit.coderabbit-vscode",
-        "DeepScan.vscode-deepscan",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "oxc.oxc-vscode"
       ]
     }
   },
