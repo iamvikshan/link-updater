@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+
+# [v1.3.0](https://github.com/iamvikshan/link-updater/compare/v1.2.6...v1.3.0) (2026-07-07)
+
+
+
+## [1.3.0](https://github.com/iamvikshan/link-updater/compare/v1.2.6...v1.3.0) (2026-07-07)
+
 # [v1.2.7](https://github.com/iamvikshan/link-updater/compare/v1.2.6...v1.2.7) (2026-01-30)
 
 ## [1.2.7](https://github.com/iamvikshan/link-updater/compare/v1.2.6...v1.2.7) (2026-01-30)
