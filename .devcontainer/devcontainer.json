@@ -1,6 +1,6 @@
 {
   "name": "Ubuntu + Bun",
-  "image": "vikshan/ubuntu-bun:latest",
+  "image": "vikshan/ubuntu-bun-ai:latest",
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {

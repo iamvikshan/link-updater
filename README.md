@@ -8,8 +8,9 @@
 
 # Link Updater
 
-A GitHub Action to automatically update links across your repository files. Perfect for maintaining
-documentation, updating deprecated URLs, or managing repository-wide link changes.
+A GitHub Action to automatically update links across your repository files.
+Perfect for maintaining documentation, updating deprecated URLs, or managing
+repository-wide link changes.
 
 ## Features
 
@@ -55,8 +56,8 @@ jobs:
 
 ### Configuration Options
 
-2. Create a configuration file `.github/links-config.yml` The configuration file (default:
-   `.github/links-config.yml`) supports the following options:
+2. Create a configuration file `.github/links-config.yml` The configuration file
+   (default: `.github/links-config.yml`) supports the following options:
 
 ```yaml
 # Directories/files to process
@@ -158,22 +159,25 @@ commitMsg: 'chore: update repository links and references[skip ci]'
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open
-an issue first to discuss what you would like to change.
+Contributions are welcome! Please feel free to submit a Pull Request. For major
+changes, please open an issue first to discuss what you would like to change.
 
 ## License
 
 This project is licensed under the MIT License - see the
-[LICENSE](https://github.com/iamvikshan/.github/blob/main/.github/LICENSE.md) file for details.
+[LICENSE](https://github.com/iamvikshan/.github/blob/main/.github/LICENSE.md)
+file for details.
 
 ## Support
 
-If you encounter any problems or have questions, please open an issue in the repository.
+If you encounter any problems or have questions, please open an issue in the
+repository.
 
 ## Security
 
-This action requires a `GH_TOKEN` with write permissions to update repository files. The token can
-be automatically provided by GitHub Actions but needs to be explicitly passed to the action.
+This action requires a `GH_TOKEN` with write permissions to update repository
+files. The token can be automatically provided by GitHub Actions but needs to be
+explicitly passed to the action.
 
 ```yaml
 permissions:
@@ -189,8 +193,9 @@ For security best practices:
 
 ## Acknowledgments
 
-This action was inspired by the need to maintain consistent documentation and links across
-repositories. You can say i am lazy but after forking repositories, i have to update the links in
-the README.md file and i thought why not automate this process. So here it is.
+This action was inspired by the need to maintain consistent documentation and
+links across repositories. You can say i am lazy but after forking repositories,
+i have to update the links in the README.md file and i thought why not automate
+this process. So here it is.
 
 ![Alt](https://repobeats.axiom.co/api/embed/d47b94f3f18ca701da81bb653928362abc705faf.svg 'Repobeats analytics image')

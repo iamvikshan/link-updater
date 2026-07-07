@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "github>iamvikshan/.github//renovate/base"
-  ]
+  "extends": ["github>iamvikshan/.github//renovate/base"]
 }

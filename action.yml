@@ -1,23 +1,24 @@
-name: "Link Updater"
-description: "Automatically updates repository links/keywords and optionally creates PRs"
-author: "vikshan"
+name: 'Link Updater'
+description:
+  'Automatically updates repository links/keywords and optionally creates PRs'
+author: 'vikshan'
 
 inputs:
   GITHUB_TOKEN:
-    description: "GitHub token for authentication"
+    description: 'GitHub token for authentication'
     required: false
     default: ${{ github.token }}
 
   CONFIG_PATH:
-    description: "Path to the links-config.yml configuration file"
+    description: 'Path to the links-config.yml configuration file'
     required: false
-    default: ".github/links-config.yml"
+    default: '.github/links-config.yml'
 
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Setup Bun and install dependencies
-      uses: iamvikshan/.github/.github/actions/bun-actions@main
+      uses: iamvikshan/.github/.github/actions/bun@main
       with:
         working-directory: ${{ github.action_path }}
 
@@ -34,5 +35,5 @@ runs:
       run: bun ${{ github.action_path }}/scripts/postjob.ts
 
 branding:
-  icon: "link"
-  color: "blue"
+  icon: 'link'
+  color: 'blue'
