@@ -54,8 +54,8 @@
     "semantic-release-gitmoji": "^1.6.9",
     "ts-node": "^10.9.2",
     "@typescript/native-preview": "^7.0.0-dev.20260707.2",
-    "lint-staged": "^17.0.8",
+    "lint-staged": "^17.1.0",
     "oxlint": "^1.74.0",
-    "oxlint-tsgolint": "^0.24.0"
+    "oxlint-tsgolint": "^0.25.0"
   }
 }
