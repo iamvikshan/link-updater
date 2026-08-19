@@ -42,7 +42,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: iamvikshan/link-updater@v1.3.2
+      - uses: iamvikshan/link-updater@v1.3.3
         with:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 ```
