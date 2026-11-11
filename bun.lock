@@ -22,7 +22,7 @@
         "@vercel/ncc": "^0.45.0",
         "axios": "^1.21.1",
         "bun-types": "^1.4.4",
-        "conventional-changelog-conventionalcommits": "^8.0.0",
+        "conventional-changelog-conventionalcommits": "^9.3.1",
         "conventional-changelog-gitmoji": "^0.2.5",
         "globals": "^17.14.0",
         "husky": "^9.1.7",
@@ -334,7 +334,7 @@
 
     "conventional-changelog-angular": ["conventional-changelog-angular@8.3.1", "", { "dependencies": { "compare-func": "^2.0.0" } }, "sha512-6gfI3otXK5Ph5DfCOI1dblr+kN3FAm5a97hYoQkqNZxOaYa5WKfXH+AnpsmS+iUH2mgVC2Cg2Qw9m5OKcmNrIg=="],
 
-    "conventional-changelog-conventionalcommits": ["conventional-changelog-conventionalcommits@8.0.0", "", { "dependencies": { "compare-func": "^2.0.0" } }, "sha512-eOvlTO6OcySPyyyk8pKz2dP4jjElYunj9hn9/s0OB+gapTO8zwS9UQWrZ1pmF2hFs3vw1xhonOLGcGjy/zgsuA=="],
+    "conventional-changelog-conventionalcommits": ["conventional-changelog-conventionalcommits@9.3.1", "", { "dependencies": { "compare-func": "^2.0.0" } }, "sha512-dTYtpIacRpcZgrvBYvBfArMmK2xvIpv2TaxM0/ZI5CBtNUzvF2x0t15HsbRABWprS6UPmvj+PzHVjSx4qAVKyw=="],
 
     "conventional-changelog-gitmoji": ["conventional-changelog-gitmoji@0.2.5", "", { "dependencies": { "q": "1.5.1" } }, "sha512-KqBDZnPLo5C1FtqDy0kQOZx/BLFWoXfaSxIPbQ0KoMwoQpB67FG8AKRXz0Mp/+JzUt+/nEMIeCCH+G4L65JLaA=="],
 
