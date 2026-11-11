@@ -29,6 +29,8 @@ jobs:
 
       - name: Setup Bun (and node for some reason) and install dependencies
         uses: iamvikshan/.github/.github/actions/bun-node@main
+        with:
+          node-version: '24'
 
       - name: Semantic Release
         env:
