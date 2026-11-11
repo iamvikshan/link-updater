@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 
 
+# [v1.3.4](https://github.com/[secure]/link-updater/compare/v1.3.3...v1.3.4) (2026-11-11)
+
+
+
+## [1.3.4](https://github.com/[secure]/link-updater/compare/v1.3.3...v1.3.4) (2026-11-11)
+
+### Bug Fixes
+
+* **deps:** update dependency js-yaml to ^5.4.1 ([#116](https://github.com/[secure]/link-updater/issues/116)) ([f164054](https://github.com/[secure]/link-updater/commit/f164054901cf8cbcaedb62fba0d024d34e70851a))
+* **deps:** update dependency js-yaml to ^5.4.2 ([#126](https://github.com/[secure]/link-updater/issues/126)) ([b2c99cd](https://github.com/[secure]/link-updater/commit/b2c99cd45db8408de6de55a6a8cb6a27b15c9306))
+* **deps:** update dependency js-yaml to ^5.4.3 ([#142](https://github.com/[secure]/link-updater/issues/142)) ([7d8625f](https://github.com/[secure]/link-updater/commit/7d8625fc36f9b38e60c81da189c6fea4337c1001))
+* **deps:** update dependency js-yaml to ^5.5.0 ([#146](https://github.com/[secure]/link-updater/issues/146)) ([151ddc7](https://github.com/[secure]/link-updater/commit/151ddc7e31e9a6ddf1d3889cfd4da0dc9b9922a3))
+
 # [v1.3.3](https://github.com/iamvikshan/link-updater/compare/v1.3.2...v1.3.3) (2026-08-19)
 
 
