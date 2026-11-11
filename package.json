@@ -43,19 +43,19 @@
     "@vercel/ncc": "^0.45.0",
     "axios": "^1.21.1",
     "bun-types": "^1.4.4",
-    "conventional-changelog-conventionalcommits": "^10.4.1",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "conventional-changelog-gitmoji": "^0.2.5",
     "globals": "^17.14.0",
     "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "oxfmt": "^0.77.0",
+    "oxlint": "^1.93.0",
+    "oxlint-tsgolint": "^7.0.2006",
     "prettier": "^3.9.10",
     "rimraf": "^6.1.4",
     "semantic-release": "^25.0.9",
     "semantic-release-gitmoji": "^1.6.9",
     "ts-node": "^10.9.2",
-    "@typescript/native-preview": "^7.0.0-dev.20260707.2",
-    "lint-staged": "^17.6.0",
-    "oxlint": "^1.93.0",
-    "oxlint-tsgolint": "^7.0.2006"
+    "typescript": "^7.0.2"
   }
 }
