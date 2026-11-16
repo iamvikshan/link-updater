@@ -50,7 +50,7 @@
     "lint-staged": "^17.6.0",
     "oxfmt": "^0.77.0",
     "oxlint": "^1.93.0",
-    "oxlint-tsgolint": "^7.0.2006",
+    "oxlint-tsgolint": "^7.0.2007",
     "prettier": "^3.9.10",
     "rimraf": "^6.1.4",
     "semantic-release": "^25.0.9",
